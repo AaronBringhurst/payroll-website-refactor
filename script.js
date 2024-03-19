@@ -24,7 +24,7 @@ const collectEmployees = function() {
         }
 
       }
-    
+    return nameInput;
     }
     while(addMore) {
       let firstName = getValidName('Enter employees first name:');
@@ -36,7 +36,7 @@ const collectEmployees = function() {
 
       addMore =confirm('Would you like to add another employee?')
     }
-    return nameInput;
+    return employee;
   }
 
 
@@ -46,7 +46,7 @@ const displayAverageSalary = function(employeesArray) {
   // TODO: Calculate and display the average salary
   let totalSalary = employeesArray.reduce((acc, curr) => acc + curr.salary, 0);
   let averageSalary = totalSalary / employeesArray.length;
-  console.log('Average Salary: $${averageSalary.toFixed(2)}, Total Employees: ${employeesArray.length}')
+  console.log(`Average Salary: $${averageSalary.toFixed(2)}, Total Employees: ${employeesArray.length}`)
 }
 
 // Select a random employee
